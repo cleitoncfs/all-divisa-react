@@ -1,0 +1,17 @@
+.sobre {
+    background-color: var(--branco);
+}
+
+.sobre p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .sobre p {
+        padding: 0 15px;
+    }
+}

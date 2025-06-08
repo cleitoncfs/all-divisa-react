@@ -1,0 +1,76 @@
+.footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 30px 0;
+    text-align: center;
+}
+
+.copyright {
+    font-size: 0.9rem;
+}
+
+.credits {
+    font-size: 0.75rem; /* Fonte menor para os créditos */
+    color: rgba(255, 255, 255, 0.8); /* Deixa o texto um pouco mais discreto */
+    margin-top: 5px;
+}
+
+.footerLink {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.footerLink:hover, 
+.footerLink:focus {
+    color: var(--verde-claro); /* Mudança de cor ao passar o mouse */
+    transform: scale(1.1); /* Pequeno aumento para destacar */
+    text-decoration: underline; /* Adiciona um sublinhado no hover */
+}
+
+
+
+.linkIcon {
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.redesSociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.redesSociais a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    transition: var(--transicao);
+}
+
+.redesSociais a:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+.redesSociais img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 768px) {
+    .redesSociais {
+        gap: 15px;
+    }
+
+    .redesSociais a {
+        width: 35px;
+        height: 35px;
+    }
+
+    .credits {
+        font-size: 0.7rem; /* Ajuste para telas menores */
+    }
+}

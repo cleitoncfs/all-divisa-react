@@ -1,0 +1,40 @@
+.servicos {
+    background-color: var(--cinza-claro);
+}
+
+.servicosGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.servico {
+    background-color: var(--branco);
+    border: 1px solid var(--azul-petroleo);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    transition: var(--transicao);
+}
+
+.servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.servico h3 {
+    color: var(--azul-petroleo);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.servico p {
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .servicosGrid {
+        grid-template-columns: 1fr;
+    }
+}

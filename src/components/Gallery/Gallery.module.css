@@ -1,0 +1,145 @@
+/* src/components/Gallery/Gallery.module.css */
+
+.galeria {
+    background-color: var(--cinza-claro);
+    padding: 80px 0;
+}
+
+.galeriaGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.galeriaItem {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    transition: var(--transicao);
+    cursor: pointer;
+    aspect-ratio: 4/3;
+}
+
+.galeriaItem:hover {
+    transform: scale(1.03);
+}
+
+.galeriaItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.galeriaItem:hover img {
+    transform: scale(1.1);
+}
+
+/* Lightbox */
+.lightbox {
+    display: flex;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+}
+
+.lightboxConteudo {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightboxConteudo img {
+    max-height: 90vh;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: var(--branco);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.fechar:hover {
+    color: var(--verde-destaque);
+}
+
+.anterior,
+.proxima {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    color: var(--branco);
+    font-weight: bold;
+    font-size: 40px;
+    transition: color 0.3s;
+    background: none; /* Remove o fundo */
+    border: none; /* Remove qualquer borda */
+    padding: 0; /* Remove espaçamentos internos */
+}
+
+.proxima {
+    right: 20px; /* Ajuste fino para melhor posicionamento */
+}
+
+.anterior {
+    left: 20px; /* Ajuste fino para melhor posicionamento */
+}
+
+.anterior:hover,
+.proxima:hover {
+    color: var(--verde-destaque);
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .galeria {
+        padding: 60px 0;
+    }
+    
+    .galeriaGrid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .lightboxConteudo {
+        width: 95%;
+        height: 80vh;
+    }
+    
+    .fechar {
+        font-size: 28px;
+        top: 20px;
+        right: 20px;
+    }
+    
+    .anterior,
+    .proxima {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeriaGrid {
+        grid-template-columns: 1fr;
+    }
+}
