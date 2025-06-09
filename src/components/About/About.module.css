@@ -1,17 +1,64 @@
 .sobre {
     background-color: var(--branco);
+    position: relative;
+    overflow: hidden;
 }
 
-.sobre p {
+.content {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.8;
 }
 
+.paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--cinza-texto);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.paragraph strong {
+    color: var(--verde-escuro);
+    font-weight: 600;
+}
+
+/* Efeito decorativo opcional */
+.sobre::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--verde-destaque);
+    opacity: 0.05;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.sobre::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--azul-petroleo);
+    opacity: 0.05;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
-    .sobre p {
+    .paragraph {
+        font-size: 1rem;
         padding: 0 15px;
+    }
+
+    .sobre::before,
+    .sobre::after {
+        display: none;
     }
 }

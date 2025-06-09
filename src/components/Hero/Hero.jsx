@@ -6,7 +6,10 @@ export default function Hero() {
             <div className="container">
                 <div className={styles.heroContainer}>
                     <div className={styles.heroContent}>
-                        <h2>Soluções em Divisórias, Forros e Persianas</h2>
+                        <h2>
+                            "Soluções em Divisórias, Gesso Acartonado/Drywall,
+                            Forros e Persianas"
+                        </h2>
                         <p>
                             Qualidade, agilidade e bom gosto para transformar
                             seus ambientes.
