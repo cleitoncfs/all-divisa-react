@@ -7,7 +7,7 @@ export default function Hero() {
                 <div className={styles.heroContainer}>
                     <div className={styles.heroContent}>
                         <h2>
-                            "Soluções em Divisórias, Gesso Acartonado/Drywall,
+                            "Soluções em Divisórias, Gesso Acartonado / Drywall,
                             Forros e Persianas"
                         </h2>
                         <p>
